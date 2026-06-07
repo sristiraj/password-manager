@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Google OAuth secrets — never commit these
+backend/credentials.json
+backend/token.json
+
+# Electron
+electron/node_modules/
+electron/dist/
+
+# Extension
+extension/node_modules/
+extension/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+credentials.json

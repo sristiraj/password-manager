@@ -1,0 +1,31 @@
+{
+  "name": "password-manager",
+  "version": "0.1.0",
+  "description": "Local password manager desktop app",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "electron .",
+    "build": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3",
+    "playwright": "^1.60.0"
+  },
+  "build": {
+    "appId": "com.local.password-manager",
+    "productName": "Password Manager",
+    "directories": {
+      "output": "dist"
+    },
+    "extraResources": [
+      {
+        "from": "../backend",
+        "to": "backend"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  }
+}

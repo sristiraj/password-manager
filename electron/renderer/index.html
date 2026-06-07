@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Unlock screen -->
+    <div id="screen-unlock" class="screen active">
+      <h1>Password Manager</h1>
+      <input id="master-password" type="password" placeholder="Master password" autofocus />
+      <button id="btn-unlock">Unlock</button>
+      <p id="unlock-error" class="error hidden"></p>
+    </div>
+
+    <!-- Vault screen -->
+    <div id="screen-vault" class="screen hidden">
+      <header>
+        <h2>Vault</h2>
+        <div class="header-actions">
+          <button id="btn-backup-upload">Backup to Drive</button>
+          <button id="btn-backup-download">Restore from Drive</button>
+          <button id="btn-lock">Lock</button>
+        </div>
+      </header>
+      <button id="btn-add">+ Add entry</button>
+      <ul id="entry-list"></ul>
+    </div>
+
+    <!-- Entry modal -->
+    <dialog id="modal-entry">
+      <form id="form-entry">
+        <h3 id="modal-title">New Entry</h3>
+        <input name="title" placeholder="Title" required />
+        <input name="username" placeholder="Username (optional)" />
+        <input name="password" type="password" placeholder="Password (optional)" />
+        <input name="secret" type="password" placeholder="Secret / API token (optional)" />
+        <input name="url" placeholder="URL (optional)" />
+        <textarea name="notes" placeholder="Notes (optional)"></textarea>
+        <div class="modal-actions">
+          <button type="submit">Save</button>
+          <button type="button" id="btn-modal-cancel">Cancel</button>
+        </div>
+      </form>
+    </dialog>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

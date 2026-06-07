@@ -1,0 +1,16 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, sans-serif; background: #1a1a2e; color: #e0e0e0; width: 300px; padding: 1rem; display: flex; flex-direction: column; gap: 0.7rem; }
+input { width: 100%; padding: 0.5rem 0.7rem; border-radius: 5px; border: 1px solid #444; background: #16213e; color: #e0e0e0; }
+button { padding: 0.5rem 1rem; border-radius: 5px; border: none; background: #0f3460; color: #fff; cursor: pointer; width: 100%; }
+button:hover { background: #1a4a8a; }
+.error { color: #ff6b6b; font-size: 0.8rem; }
+.hidden { display: none !important; }
+ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; max-height: 240px; overflow-y: auto; }
+li { background: #16213e; border-radius: 6px; padding: 0.5rem 0.7rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; }
+li:hover { background: #1e2d55; }
+li .entry-info { flex: 1; min-width: 0; }
+li .title { font-weight: 600; font-size: 0.9rem; }
+li .url { font-size: 0.75rem; color: #888; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.btn-copy-secret { width: auto; padding: 0.25rem 0.5rem; font-size: 0.7rem; background: #0f3460; border-radius: 4px; flex-shrink: 0; }
+.btn-copy-secret:hover { background: #1a4a8a; }
+.domain-badge { font-size: 0.75rem; color: #7ec8e3; background: #0d2137; border-radius: 4px; padding: 0.25rem 0.5rem; }

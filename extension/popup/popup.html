@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Password Manager</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div id="view-locked">
+    <input id="popup-password" type="password" placeholder="Master password" autofocus />
+    <button id="btn-popup-unlock">Unlock</button>
+    <p id="popup-error" class="error hidden"></p>
+  </div>
+
+  <div id="view-unlocked" class="hidden">
+    <input id="search" type="text" placeholder="Search…" />
+    <p id="domain-badge" class="domain-badge hidden"></p>
+    <ul id="popup-entries"></ul>
+    <button id="btn-popup-lock">Lock</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
